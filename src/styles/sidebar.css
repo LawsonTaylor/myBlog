@@ -1,0 +1,36 @@
+.sidebar {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background-color: rgb(245, 245, 245);
+  position:absolute;
+  top:0;
+  bottom:0;
+  flex-direction: column;
+}
+
+.ginger {
+  color: #f2511b;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 40px;
+}
+
+.personal-info {
+  position: absolute;
+  top: 240px;
+}
+
+.social-icons{
+  list-style: none;
+  display:flex;
+  margin: 0;
+  justify-content: space-around;
+}

@@ -8,6 +8,7 @@ function Template({
     return(
         <div className="blog-post-container">
             <Helmet title={`Lawson Taylor - ${post.frontmatter.title}`} />
+            <a className="back-button" href="/"><img src="../assets/back-arrow.svg"/></a>
             <div className="blog-post">
                 <h1>{post.frontmatter.title}</h1>
                 <div

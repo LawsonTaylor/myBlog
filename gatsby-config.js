@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Lawson ',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,7 +13,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
   {
     resolve: `gatsby-transformer-remark`,
     options: {
@@ -35,6 +34,15 @@ module.exports = {
             width: 800,
             height: 400
           }
+        },
+        {
+          resolve: "gatsby-remark-custom-blocks",
+          options: {
+            blocks: {
+              breakLine: "custom-break-line",
+              info: "custom-block-info",
+            },
+          },
         }
       ],
     },

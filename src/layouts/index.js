@@ -11,7 +11,7 @@ import '../styles/layout-override.css'
 
 const MainContent = (lrg, children) => {
   
-  let flx = lrg ? {flex: 1} : {flex: 2.5, paddingRight: "30px"}; 
+  let flx = lrg ? {flex: 1, paddingLeft: "340px", paddingTop: "60px"} : {flex: 2.5, paddingLeft: "40px", paddingTop: "60px"}; 
 
   let sidebar = lrg ? SideBarContent() : '';
 
@@ -19,30 +19,25 @@ const MainContent = (lrg, children) => {
   <div
     style={{
       margin: "0 auto",
-      maxWidth: 980,
+      maxWidth: "100%",
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-between",
       height: "100%",
-      padding: "25px"
     }}
   >
+  {sidebar}
   <div style={flx}>{children()}</div>
-    {sidebar}
   </div>
   ); 
 }
 
 const SideBarContent = () => {
   return(
-    <div styles={{ flex: 1}}>
+    <div styles={{ flex: 1, height: "100vh"}}>
     <Sidebar
       title="Lawson's Blog"
       descrption="Articles on my everything"
-      />
-    <Sidebar
-      title="About Me"
-      description="Boring Facts"
       />
     </div>
   );
@@ -57,12 +52,10 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
+        maxWidth: "100%",
         paddingTop: 0,
       }}
     >
